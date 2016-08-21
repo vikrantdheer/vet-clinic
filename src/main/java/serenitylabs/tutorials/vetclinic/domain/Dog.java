@@ -1,10 +1,15 @@
 package serenitylabs.tutorials.vetclinic.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.common.collect.ImmutableList;
+
 public class Dog {
 
 	private final String name;
 	private final String breed;
-	private final String color;
+	private final List<String> color;
 	private final int age;
 
 	/**
@@ -24,8 +29,8 @@ public class Dog {
 	/**
 	 * @return the color
 	 */
-	public String getColor() {
-		return color;
+	public List<String> getColor() {
+		return new ArrayList(color);
 	}
 
 	/**
@@ -41,7 +46,7 @@ public class Dog {
 	 * @param age
 	 * @param color
 	 */
-	public Dog(String name, String breed, int age, String color) {
+	public Dog(String name, String breed, int age, List<String> color) {
 		super();
 		this.name = name;
 		this.breed = breed;
@@ -89,15 +94,24 @@ public class Dog {
 			return this;
 		}
 
-		public DogBuilder age(int age) {
+		public DogBuilder ofAge(int age) {
 			this.age = age;
 			return this;
 		}
 
-		public Dog andOfColor(String color) {
-			return new Dog(name, breed, age, color);
+		public Dog andOfColor(String... color) {
+			return new Dog(name, breed, age, ImmutableList.copyOf(color));
 		}
+	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return name + " the " + color.get(0) + " " + breed;
 	}
 
 }
