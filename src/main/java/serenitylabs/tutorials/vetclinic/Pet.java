@@ -1,8 +1,17 @@
 package serenitylabs.tutorials.vetclinic;
 
+import java.util.Comparator;
+
 import com.google.common.base.Objects;
 
 public class Pet {
+	
+	public static final Comparator<String> BY_LENGTH = new Comparator<String>() {
+		
+		public int compare(final String s1, final String s2){
+			return s1.length() - s2.length();
+		}
+	};
     private final String name;
     private final Breed breed;
 

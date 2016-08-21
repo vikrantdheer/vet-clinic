@@ -1,13 +1,14 @@
 package serenitylabs.tutorials.vetclinic.collections.exercises;
 
-import org.junit.Test;
-import serenitylabs.tutorials.vetclinic.Pet;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 import java.util.Deque;
 import java.util.LinkedList;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
+import org.junit.Test;
+
+import serenitylabs.tutorials.vetclinic.Pet;
 
 public class WhenWorkingWithAStackOfPets {
 
@@ -20,7 +21,7 @@ public class WhenWorkingWithAStackOfPets {
         pets.push(Pet.dog().named("Fido"));
 
         // TODO: Retrieve the last pet put on the list
-        Pet lastPet = null;
+        Pet lastPet = pets.pop();
 
         assertThat(lastPet.getName(),equalTo("Fido"));
         assertThat(pets.size(), equalTo(1));
@@ -35,7 +36,7 @@ public class WhenWorkingWithAStackOfPets {
         pets.push(Pet.dog().named("Fido"));
 
         // TODO: Retrieve the last pet put on the list
-        Pet lastPet = null;
+        Pet lastPet = pets.peek();
 
         assertThat(lastPet.getName(),equalTo("Fido"));
         assertThat(pets.size(), equalTo(2));
