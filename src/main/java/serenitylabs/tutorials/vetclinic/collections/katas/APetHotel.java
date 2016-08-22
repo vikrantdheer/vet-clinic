@@ -18,12 +18,21 @@ public class APetHotel {
 	}
 
 	public static class PetAdder {
-		
+
 		private final int petCount;
 
 		public PetAdder(int petCount) {
 
 			this.petCount = petCount;
+		}
+
+		public PetHotel checkedIn() {
+			PetHotel petHotel = new PetHotel();
+			for (int i = 0; i < petCount; i++) {
+				petHotel.checkIn(somePet(i));
+				System.out.println(somePet(i).toString());
+			}
+			return petHotel;
 		}
 
 		private Pet somePet(int petCount) {
