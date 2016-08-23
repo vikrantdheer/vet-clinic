@@ -1,30 +1,37 @@
 package serenitylabs.tutorials.vetclinic.enumerations.exercises;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Test;
+
+import serenitylabs.tutorials.vetclinic.Gender;
 import serenitylabs.tutorials.vetclinic.Pet;
 
 public class WhenCreatingASimpleEnum {
 
-    @Test
-    public void the_gender_of_a_pet_should_be_considered_unknown_by_default() {
+	@Test
+	public void the_gender_of_a_pet_should_be_considered_unknown_by_default() {
 
-        // TODO: Add a gender field to the Pet class that takes two possible values: Male, Female and Unknown
+		// TODO: Add a gender field to the Pet class that takes two possible
+		// values: Male, Female and Unknown
 
-        // TODO: assertThat(unidentifiedTabby.getGender(), equalTo(Gender.Unknown));
+		Pet unidentifiedTabby = Pet.dog().named("Dog");
 
-    }
+		assertThat(unidentifiedTabby.getGender(), equalTo(Gender.Unknown));
 
-    @Test
-    public void the_gender_of_a_pet_can_be_provided() {
+	}
 
-        // TODO: Refactor the Pet builder method to allow the following construct:
+	@Test
+	public void the_gender_of_a_pet_can_be_provided() {
 
-        Pet lassie = null;
+		// TODO: Refactor the Pet builder method to allow the following
+		// construct:
 
-        // TODO:
-        // assertThat(lassie.getGender(), equalTo(Gender.Male));
+		Pet lassie = Pet.dog().ofGender(Gender.Male).named("NameOfADog");
 
-    }
+		assertThat(lassie.getGender(), equalTo(Gender.Male));
 
+	}
 
 }
