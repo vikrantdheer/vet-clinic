@@ -39,7 +39,7 @@ public class Pet {
 
     @Override
     public String toString() {
-        return "a " + breed + " called " + name;
+        return breed + " called " + name;
     }
 
     @Override
