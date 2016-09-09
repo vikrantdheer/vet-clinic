@@ -21,10 +21,11 @@ public class WhenAddingATodoItem {
 
     @Before
     public void setup() {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+        /*DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setJavascriptEnabled(true);
         capabilities.setCapability("phantomjs.binary.path","D:\\Vikrant\\Softwares\\Drivers\\phantom\\bin\\phantomjs.exe");
-        driver = new PhantomJSDriver(capabilities);
+        driver = new PhantomJSDriver(capabilities);*/
+        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 
