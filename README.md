@@ -15,16 +15,24 @@ These tutorials are designed to be used as the basis of small coding exercises (
 
 The domain is a simple one. We are writing an application for a Vet clinic, where you can take your pets to be treated when they are sick. At the vet clinic, we need to be able to register new animals when they arrive for treatment.
 
-## Starting a tutorial
+## Exercises
 
-Each tutorial has two main branches, one for the starting point for the tutorial, and one for a sample solution. The format for the branch names uses a simple naming convention to identify the starting point and the sample solutions for each tutorial. For example, to start tutorial 1, check out the `start` branch like this:
-```
-$ git checkout tutorial-1/start
-```
+These exercises involve working with the Dojo TodoMVC web site (http://todomvc.com/examples/dojo/#/). The test skeletons for these exercises can be found in the WhenLocatingElements class.
 
-And to see the solution for tutorial 1, use the solution branch:
-```
-$ git checkout tutorial-1/solution
-```
+### Exercise 1 - Find the new todo field by ID
 
-Go to the tutorial branch to see the step-by-step instructions for that tutorial.
+### Exercise 2 - Find the quote block by tag
+
+### Exercise 3 - Find the source link by link text
+
+### Exercise 4 - Find the new todo field by CSS
+
+### Exercise 5 - Find the new todo field by class
+
+### Exercise 6 - Find the quote block by CSS
+
+### Exercise 7 - Find the new todo field by XPATH
+
+### Exercise 8 - Find the todo entries by CSS
+
+   
