@@ -27,7 +27,7 @@ public class WhenInteractingWithElementsAndForms {
         //capabilities.setCapability("phantomjs.binary.path", "D:\\Vikrant\\Softwares\\Drivers\\phantom\\bin\\phantomjs.exe");
         //driver = new PhantomJSDriver(capabilities);
 
-        driver = new FirefoxDriver();
+        driver = new PhantomJSDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.get("http://www.sydneytrains.info/");
     }
