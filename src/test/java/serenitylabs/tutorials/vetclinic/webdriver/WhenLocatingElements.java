@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +22,7 @@ public class WhenLocatingElements {
 
     @Before
     public void setup() {
-        driver = new FirefoxDriver();
+        driver = new PhantomJSDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.get("http://todomvc.com/examples/dojo");
     }
@@ -102,8 +103,8 @@ public class WhenLocatingElements {
         todoInputField.sendKeys(Keys.RETURN);
     }
 
-    @After
+    /*@After
     public void shutdown() {
         driver.quit();
-    }
+    }*/
 }

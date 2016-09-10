@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -13,7 +14,7 @@ public class WhenLookingForAPetStore {
     @Test
     public void should_find_pet_stores() {
 
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new PhantomJSDriver();
 
         driver.get("https://duckduckgo.com/");
 

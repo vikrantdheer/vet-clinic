@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +17,7 @@ public class WhenAddingATodoItem {
 
     @Test
     public void should_add_new_item_to_list() {
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new PhantomJSDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
         // GIVEN
