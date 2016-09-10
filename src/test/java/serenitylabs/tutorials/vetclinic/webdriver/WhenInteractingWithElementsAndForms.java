@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -27,7 +28,7 @@ public class WhenInteractingWithElementsAndForms {
         //capabilities.setCapability("phantomjs.binary.path", "D:\\Vikrant\\Softwares\\Drivers\\phantom\\bin\\phantomjs.exe");
         //driver = new PhantomJSDriver(capabilities);
 
-        driver = new PhantomJSDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.get("http://www.sydneytrains.info/");
     }

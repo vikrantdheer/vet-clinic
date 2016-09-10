@@ -4,6 +4,7 @@ import net.serenitybdd.core.annotations.findby.By;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
@@ -14,7 +15,7 @@ public class WhenLookingForAPetStore {
     @Test
     public void should_find_pet_stores() {
 
-        WebDriver driver = new PhantomJSDriver();
+        WebDriver driver = new ChromeDriver();
 
         driver.get("https://duckduckgo.com/");
 
