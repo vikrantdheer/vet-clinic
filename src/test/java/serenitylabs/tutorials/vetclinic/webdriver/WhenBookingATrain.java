@@ -31,7 +31,7 @@ public class WhenBookingATrain {
         capabilities.setCapability("phantomjs.binary.path", "D:\\Vikrant\\Softwares\\Drivers\\phantom\\bin\\phantomjs.exe");
         driver = new PhantomJSDriver(capabilities);*/
 
-        //System.setProperty("webdriver.chrome.driver", "D:\\Vikrant\\Softwares\\Drivers\\ChromeDriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\Vikrant\\Softwares\\Drivers\\ChromeDriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("http://www.sydneytrains.info/");
@@ -81,7 +81,6 @@ public class WhenBookingATrain {
         Select selectedDay  = new Select(driver.findElement(By.id("itdDateDayMonthYear")));
         assertThat(selectedDay.getFirstSelectedOption().getText(), containsString("Today"));
     }
-
 
     /*@After
     public void shutdown() {
