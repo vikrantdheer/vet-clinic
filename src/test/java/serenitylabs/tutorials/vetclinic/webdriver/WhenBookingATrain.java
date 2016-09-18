@@ -18,8 +18,9 @@ public class WhenBookingATrain {
 
     @Before
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "D:\\Vikrant\\Softwares\\Drivers\\ChromeDriver\\chromedriver.exe");
-        driver = new ChromeDriver();
+        //System.setProperty("webdriver.chrome.driver", "D:\\Vikrant\\Softwares\\Drivers\\ChromeDriver\\chromedriver.exe");
+        //driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.get("http://www.sydneytrains.info/");
     }
