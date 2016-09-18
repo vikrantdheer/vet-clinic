@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -17,7 +18,8 @@ public class WhenBookingATrain {
 
     @Before
     public void setup() {
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "D:\\Vikrant\\Softwares\\Drivers\\ChromeDriver\\chromedriver.exe");
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.get("http://www.sydneytrains.info/");
     }
@@ -38,7 +40,7 @@ public class WhenBookingATrain {
                 .from("Town Hall Station, Sydney")
                 .to("Parramatta Station, Parramatta")
                 .arrivingOn("Tomorrow")
-                .at("10","15");
+                .at("10", "15");
 
         assertThat(displayedTripPreferences, equalTo(expectedTripPreferences));
     }
