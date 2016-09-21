@@ -1,30 +1,35 @@
-# Vet Clinic Tutorial Project
+# The Supermarket Checkout exercise
 
-This project is used as the basis of a number of tutorials and exercises, as part of the *Professional Java Development and Test Automation Skills* program (see http://johnfergusonsmart.com/products). Each tutorial explores a different technique or practice essential to modern Java developers or Engineers in Test. 
+This is a variation of a popular kata described in http://codekata.com/kata/kata01-supermarket-pricing/. The aim of the exercise is to build an automated teller that can check out articles from a shopping cart. 
 
-These tutorials are designed to be used as the basis of small coding exercises (similar to very short coding katas) that you can learn and practice until you are familiar with a particular technique. The approach is outlined here:
+The supermarket has a catalog with different types of products (rice, apples, milk, toothbrushes,...). Each product has a price, and the total price of the shopping cart is the total of all the prices.
 
-![Learning from the tutorials](src/documentation/images/tutorial-process.png)
+But the supermarket also runs special deals, e.g.
+ - Buy two toothbrushes, get one free
+ - 10% discount on rice
+ - 20% discount on apples if you buy more than 10
+ - Bags of 1 kg of oranges $4 instead of $5.
 
-1. Clone this repository and check out the starting point for the tutorial you want to do.
-2. Watch the tutorial and follow along on your own machine.
-3. Redo the tutorial following the step-by-step instructions given in the tutorial's README file.
-4. Redo the exercise without the instructions.
+These are just examples: the actual special deals changes each week, so needs to be easily configurable.
 
-## The problem domain
+## Goal
 
-The domain is a simple one. We are writing an application for a Vet clinic, where you can take your pets to be treated when they are sick. At the vet clinic, we need to be able to register new animals when they arrive for treatment.
+The goal of the exercise is to implement a teller that can handle the following scenarios (and more - use your imagination!)
 
-## Starting a tutorial
+ - The teller should be able to handle a shopping cart with no special deals
+ - The client should get a receipt with the list of purchases and the total price.
+ - The teller should be able to handle the following scenarios
+    - Buy 2 get one free
+    - Buy 4 get one free
+    - 10% discount on a certain product (e.g. 10% discount on 1kg packets of rice)
+    - 20% discount on a certain product if you buy more than 10 (e.g 20% discount on apples for 11 or more apples)
+    - Fixed discounts (e.g. bag of 1kg of oranges costs $4 instead of $5).
+ 
+ - The teller should be able to handle combinations of the above scenarios, when there is more than one special deal in the shopping cart items.
 
-Each tutorial has two main branches, one for the starting point for the tutorial, and one for a sample solution. The format for the branch names uses a simple naming convention to identify the starting point and the sample solutions for each tutorial. For example, to start tutorial 1, check out the `start` branch like this:
-```
-$ git checkout tutorial-1/start
-```
+There is a simple failing test in `WhenCheckingOutArticlesAtTheSupermarket` to get you started.
 
-And to see the solution for tutorial 1, use the solution branch:
-```
-$ git checkout tutorial-1/solution
-```
 
-Go to the tutorial branch to see the step-by-step instructions for that tutorial.
+This repository contains a number of exercises that students can use to practice their coding skills. The different exercises are stored in different branches. They include:
+  - *[The Supermarket Checkout](https://github.com/serenity-dojo/coding-katas/tree/supermarket-checkout)*: An exercise to practice TDD and simple design patterns
+
